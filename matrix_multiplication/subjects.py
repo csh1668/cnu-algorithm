@@ -7,9 +7,9 @@ def naive(A, B):
                 C[i][j] += A[i][k] * B[k][j]
     return C
 
-def strassen(A, B, threadhold=64):
+def strassen(A, B, threshold=64):
     n = len(A)
-    if n <= threadhold: return naive(A, B)
+    if n <= threshold: return naive(A, B)
     def add(M1, M2, sz):
         return [[M1[i][j] + M2[i][j] for j in range(sz)] for i in range(sz)]
     def sub(M1, M2, sz):

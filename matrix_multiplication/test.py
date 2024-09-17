@@ -14,8 +14,8 @@ class Test:
         return naive(self.m1, self.m2)
 
     @measure(10)
-    def test_strassen(self, threadhold=64):
-        return strassen(self.m1, self.m2, threadhold)
+    def test_strassen(self, threshold=64):
+        return strassen(self.m1, self.m2, threshold)
 
     def test(self):
         naive_result = self.test_naive()
