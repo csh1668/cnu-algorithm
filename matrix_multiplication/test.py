@@ -9,11 +9,11 @@ class Test:
         self.m1 = [[self.rand.randint(0, 10) for _ in range(size)] for _ in range(size)]
         self.m2 = [[self.rand.randint(0, 10) for _ in range(size)] for _ in range(size)]
 
-    @measure()
+    @measure(10)
     def test_naive(self):
         return naive(self.m1, self.m2)
 
-    @measure()
+    @measure(10)
     def test_strassen(self, threadhold=64):
         return strassen(self.m1, self.m2, threadhold)
 
