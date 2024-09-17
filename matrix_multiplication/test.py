@@ -1,7 +1,7 @@
 import random
 
 from benchmark import measure, print_results
-from subjects import *
+from matrix_multiplication.subjects import *
 
 class Test:
     def __init__(self, size, seed=0):
